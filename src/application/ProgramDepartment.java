@@ -5,7 +5,6 @@ import java.util.List;
 import model.dao.DaoFactory;
 import model.dao.DepartmentDao;
 import model.entities.Department;
-import model.entities.Seller;
 
 public class ProgramDepartment {
 
@@ -25,6 +24,13 @@ public class ProgramDepartment {
 
 		Department department = dep.findById(2);
 		System.out.println(department);
+		
+		System.out.println();
+		System.out.println("=== TEST 3: department insert ===");
+		
+		Department newDep = new Department(null, "Test2");
+		dep.insert(newDep);
+		System.out.println("Inserted! New id = " + newDep.getId());
 
 	}
 
