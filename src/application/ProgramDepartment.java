@@ -31,7 +31,14 @@ public class ProgramDepartment {
 		Department newDep = new Department(null, "Test2");
 		dep.insert(newDep);
 		System.out.println("Inserted! New id = " + newDep.getId());
-
+		
+		System.out.println();
+		System.out.println("=== TEST 5: seller update ===");
+		
+		department = dep.findById(5);
+		department.setName("Update test");
+		dep.update(department);
+		System.out.println("Update completed!");
 	}
 
 }
